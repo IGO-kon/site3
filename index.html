@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魚屋 - 新鮮な魚介類をお届けします</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e3c72;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2a5298;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1e3c72;
+        }
+
+        .about {
+            background: #fff;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .products {
+            background: #f8f9fa;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            background: #fff;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .contact-item strong {
+            color: #1e3c72;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐟 魚屋</h1>
+        <p>新鮮な魚介類をお届けします</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">店舗について</a></li>
+            <li><a href="#products">商品案内</a></li>
+            <li><a href="#contact">アクセス・お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>店舗について</h2>
+            <div class="about-content">
+                <p>
+                    当店は創業以来、地域の皆様に新鮮で美味しい魚介類をお届けしてまいりました。
+                    毎朝市場で仕入れた新鮮な魚を、熟練の職人が丁寧に捌いてご提供いたします。
+                </p>
+                <p style="margin-top: 1rem;">
+                    季節の旬の魚から定番の魚まで、幅広く取り揃えております。
+                    お刺身、切り身、丸ごとなど、お客様のご要望に応じて対応いたします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>商品案内</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">🐟</div>
+                    <h3>鮮魚</h3>
+                    <p>毎朝市場から直送の新鮮な魚を豊富に取り揃えております。季節の旬の魚をお楽しみください。</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍣</div>
+                    <h3>お刺身</h3>
+                    <p>新鮮な魚を使用した刺身盛り合わせをご用意。ご家庭やパーティーにも最適です。</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🦐</div>
+                    <h3>海老・貝類</h3>
+                    <p>活きの良い海老や貝類も豊富に取り揃えております。料理に合わせてお選びください。</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🦑</div>
+                    <h3>イカ・タコ</h3>
+                    <p>新鮮なイカやタコも各種ご用意。刺身、焼き物、煮物など、用途に応じてご提供いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>アクセス・お問い合わせ</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📍 住所</strong>
+                    〒000-0000 東京都○○区○○ 1-2-3
+                </div>
+                <div class="contact-item">
+                    <strong>📞 電話番号</strong>
+                    03-0000-0000
+                </div>
+                <div class="contact-item">
+                    <strong>🕒 営業時間</strong>
+                    9:00 - 18:00（定休日：水曜日）
+                </div>
+                <div class="contact-item">
+                    <strong>🚃 アクセス</strong>
+                    ○○駅から徒歩5分
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 魚屋. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

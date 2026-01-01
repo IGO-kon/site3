@@ -74,14 +74,42 @@ document.querySelectorAll('.product-card').forEach(card => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
+// Throttle function for performance
+function throttle(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Combined scroll handler for better performance
+const header = document.querySelector('header');
+const hero = document.querySelector('.hero');
+
+const handleScroll = throttle(() => {
     const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
+    
+    // Parallax effect for hero section
     if (hero) {
         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
-});
+    
+    // Dynamic shadow on header
+    if (header) {
+        if (scrolled > 50) {
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+        } else {
+            header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        }
+    }
+}, 16); // ~60fps
+
+window.addEventListener('scroll', handleScroll);
 
 // Form submission animation
 const contactForm = document.querySelector('.contact-form');
@@ -123,23 +151,9 @@ navLinks.forEach(link => {
     });
 });
 
-// Add dynamic shadow on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-    }
-});
-
 // Add loading animation on page load
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease-in';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    document.body.classList.add('loaded');
 });
 
 // Add card flip effect on double-click

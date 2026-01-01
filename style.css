@@ -17,6 +17,12 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 /* Header Navigation with Animation */

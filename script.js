@@ -99,7 +99,7 @@ if (contactForm) {
         // Simulate form submission
         setTimeout(() => {
             button.textContent = '送信完了！';
-            button.style.background = var(--secondary-color);
+            button.style.background = '#00cc88';
             
             setTimeout(() => {
                 button.textContent = originalText;

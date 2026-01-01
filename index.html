@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site3 - モダンなウェブサイト">
+    <title>Site3 - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Site3</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="#features" class="nav-link">特徴</a></li>
+                <li><a href="#about" class="nav-link">概要</a></li>
+                <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">モダンなデザインで<br>未来を創造する</h2>
+                <p class="hero-subtitle">Site3は最新のデザイントレンドを取り入れた、<br>美しく機能的なウェブサイトです</p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary">詳しく見る</a>
+                    <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">特徴</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>モダンデザイン</h3>
+                    <p>最新のデザイントレンドを取り入れた洗練されたインターフェース</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>レスポンシブ対応</h3>
+                    <p>あらゆるデバイスで最適な表示を実現するモバイルファースト設計</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>高速パフォーマンス</h3>
+                    <p>最適化されたコードで快適なユーザー体験を提供</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>セキュリティ</h3>
+                    <p>最新のセキュリティ基準に準拠した安全な構造</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">私たちについて</h2>
+                    <p>Site3は、モダンなデザインと最新のウェブ技術を組み合わせて、ユーザーに最高の体験を提供することを目指しています。</p>
+                    <p>シンプルで美しいデザインは、ユーザビリティを損なうことなく、視覚的な魅力を最大限に引き出します。</p>
+                    <ul class="about-list">
+                        <li>✓ ユーザー中心の設計</li>
+                        <li>✓ アクセシビリティへの配慮</li>
+                        <li>✓ 継続的な改善</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="placeholder-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">メッセージ</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">送信する</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Site3. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
